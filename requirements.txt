@@ -30,4 +30,3 @@ async_pymongo
 gpytranslate
 search_engine_parser
 gtts
-NykaaAPI
