@@ -12,18 +12,14 @@ async def draw_(b, message: Message):
     else:
 
         text =message.text.split(None, 1)[1]
-    mukesh=await message.reply_text( "`Please wait...,\n\nGenerating prompt .. ...`")
+    app=await message.reply_text( "✨")
     try:
         await b.send_chat_action(message.chat.id, ChatAction.UPLOAD_PHOTO)
         x=api.ai_image(text)
-        with open("mukesh.jpg", 'wb') as f:
+        with open("nykaa.jpg", 'wb') as f:
             f.write(x)
-        caption = f"""
-    💘sᴜᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ : {text}
-    ✨ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ : @{BOT_USERNAME}
-    🥀ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}
-    """
-        await mukesh.delete()
-        await message.reply_photo("mukesh.jpg",caption=caption,quote=True)
+        caption = f"""⬤ ᴅʀᴀᴡɪɴɢ ɢᴇɴ ʙʏ ➥ ᴀ ᴠ ʏ ᴀ ࿐"""
+        await app.delete()
+        await message.reply_photo("nykaa.jpg",caption=caption,quote=True)
     except Exception as e:
-        await mukesh.edit_text(f"error {e}")
+        await app.edit_text(f"error {e}")
