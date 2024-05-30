@@ -44,7 +44,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/tinaarobot/ABC",
+    "https://github.com/Blackpython7/ABC",
 )
 
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
